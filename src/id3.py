@@ -71,7 +71,7 @@ class DecisionTree:
 			predict_tree = predict_tree.leaf(data[predict_tree.leafcolname])
 		return predict_tree.majority
 
-	def train(self,df,x_labels,y_label):
+	def fit(self,df,x_labels,y_label):
 		columns = df.columns
 		x_labels = [columns[i] for i in x_labels]
 		self.x_labels = x_labels
