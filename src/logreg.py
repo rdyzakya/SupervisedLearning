@@ -32,7 +32,7 @@ class LogisticRegression:
 		self.b_values = None
 		self.y_vals = None
 
-	def train(self,df_,x_labels, y_label, alpha, epochs):
+	def fit(self,df_,x_labels, y_label, alpha, epochs):
 		df = df_.copy()
 		x_labels = [df.columns[i] for i in x_labels]
 		y_label = df.columns[y_label]
