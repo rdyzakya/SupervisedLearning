@@ -24,15 +24,13 @@ df = pd.read_csv('namafile.csv')
 ### Penggunaan KNN
 
 6.a. Instansiasi model
-Contoh:
+
 ```
 #kolom ke-0,1,2,3 merupakan kolom fitur, kolom ke-4 merupakan kolom label/target
 clf = knn.KNNClassifier(df,x_labels=[0,1,2,3],y_label=4)
 ```
 
 6.b. Lakukan predict kepada data yang ingin dipredict
-
-Contoh:
 
 ```
 #satu data point
