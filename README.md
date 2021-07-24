@@ -110,13 +110,13 @@ Outlook
       - normal
       (yes)
   - overcast
-	 (yes)
+  (yes)
   - rain
     Wind
       - weak
-		  (yes)
-	    - strong
-		  (no)
+      (yes)
+      - strong
+      (no)
 ```
 
 8.d. Lakukan prediksi/klasifikasi
