@@ -55,8 +55,9 @@ clf = lr.LogisticRegression()
 
 ```python
 clf.fit(df,x_labels=[0,1],y_label=2,alpha=0.9,epochs=100)
-
-#output
+```
+```
+output:
 Epoch : 1 | Accuracy : 0.5 | Time : 0.0069 s
 Epoch : 2 | Accuracy : 0.6 | Time : 0.0045 s
 Epoch : 3 | Accuracy : 0.8 | Time : 0.0079 s
