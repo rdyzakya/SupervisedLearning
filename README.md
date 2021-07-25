@@ -8,7 +8,7 @@ Berikut adalah tatacara pemakaiannya:
 3. Buatlah sebuah file notebook (ipynb), bisa juga dipakai di file .py sesuai kebutuhan
 4. Lakukan import source code model
 
-```
+```python
 import src.knn as knn
 import src.id3 as id3
 import src.logreg as lr
@@ -16,7 +16,7 @@ import src.logreg as lr
 
 5. Instansiasi dataframe menggunakan pandas
 
-```
+```python
 import pandas as pd
 df = pd.read_csv('namafile.csv')
 ```
@@ -25,14 +25,14 @@ df = pd.read_csv('namafile.csv')
 
 6.a. Instansiasi model
 
-```
+```python
 #kolom ke-0,1,2,3 merupakan kolom fitur, kolom ke-4 merupakan kolom label/target
 clf = knn.KNNClassifier(df,x_labels=[0,1,2,3],y_label=4)
 ```
 
 6.b. Lakukan predict kepada data yang ingin dipredict
 
-```
+```python
 #satu data point
 data_point = [1.52369, 13.44, 0.0, 1.58]
 result = clf.predict(data_point,k=11,print_time=True)
@@ -47,13 +47,13 @@ print(result)
 
 7.a. Instansiasi model
 
-```
+```python
 clf = lr.LogisticRegression()
 ```
 
 7.b. Lakukan training pada model menggunakan dataset
 
-```
+```python
 clf.fit(df,x_labels=[0,1],y_label=2,alpha=0.9,epochs=100)
 
 #output
@@ -72,7 +72,7 @@ Epoch : 10 | Accuracy : 1.0 | Time : 0.0043 s
 
 7.c. Lakukan predict kepada data yang ingin diklasifikasi
 
-```
+```python
 #satu datapoint
 clf.predict([-0.136471,0.632003])
 
@@ -84,13 +84,13 @@ df['label'] = df.apply(lambda x: clf.predict(df[['A','B']].to_list()),axis=1)
 
 8.a. Instansiasi model id3
 
-```
+```python
 clf = id3.DecisionTree()
 ```
 
 8.b. Training model
 
-```
+```python
 clf.fit(df,x_labels=[0,1,2,3],y_label=4)
 ```
 
@@ -119,7 +119,7 @@ Outlook
 
 8.d. Lakukan prediksi/klasifikasi
 
-```
+```python
 #datapoint
 clf.predict(['overcast','hot','high','weak'])
 
